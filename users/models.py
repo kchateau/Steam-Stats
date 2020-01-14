@@ -3,5 +3,5 @@ from django.db import models
 
 
 class CustomUser(AbstractUser):
-    pass
-    # add additional fields in here
+    steam_id = models.CharField(max_length=32, default=0)
+
