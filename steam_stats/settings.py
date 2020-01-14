@@ -29,7 +29,7 @@ ALLOWED_HOSTS = []
 
 SITE_ID = 1
 
-LOGIN_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = 'on_login'
 LOGOUT_REDIRECT_URL = 'home'
 
 
