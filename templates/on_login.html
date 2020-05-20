@@ -9,6 +9,10 @@
 <p>Username: {{ steam_user.display_name }}</p>
 <img src="{{ steam_user.avatar }}">
 <p>User is currently {{ steam_user.state }}</p>
+<p>Friends:</p>
+{% for friend in friend_list %}
+    <p>{{friend.steam_id}}</p>
+{% endfor %}
 
 </body>
 </html>
