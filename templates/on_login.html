@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
 </head>
 <img>
-<p>{{user.username}} just logged in</p>
-<p>Steam ID: {{ user.steam_id }}</p>
-<p>Username: {{ response.personaname }}</p>
-<img src="{{ response.avatarfull }}">
-<p>User is currently {{response.profilestate}}</p>
+<p>{{ user.username }} just logged in</p>
+<p>Steam ID: {{ steam_user.steam_id }}</p>
+<p>Username: {{ steam_user.display_name }}</p>
+<img src="{{ steam_user.avatar }}">
+<p>User is currently {{ steam_user.state }}</p>
 
 </body>
 </html>
