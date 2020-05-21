@@ -13,6 +13,11 @@
 {% for friend in friend_list %}
     <p>{{friend.steam_id}}</p>
 {% endfor %}
+<p>Owned Games:</p>
+{% for game in game_list %}
+    <p>{{game.name}} {{game.playtime}}</p>
+{% endfor %}
+
 
 </body>
 </html>

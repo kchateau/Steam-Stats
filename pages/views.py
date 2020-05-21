@@ -1,6 +1,8 @@
 from django.views.generic import TemplateView
 from lib.steam_api_calls.get_player_summaries import get_player_summaries
 from lib.steam_api_calls.get_friend_list import get_friend_list
+from lib.steam_api_calls.get_owned_games import get_owned_games
+
 
 
 class HomePageView(TemplateView):
@@ -16,4 +18,6 @@ class LoginView(TemplateView):
         context["steam_user"] = steam_user
         friend_list = get_friend_list(self.request.user.steam_id)
         context["friend_list"] = friend_list
+        game_list = get_owned_games(self.request.user.steam_id)
+        context["game_list"] = game_list
         return context    

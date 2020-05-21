@@ -14,6 +14,5 @@ def make_friend_object_list(api_response):
     friend_list = []
     for friend in api_response:
         curr_friend = Friend(friend['steamid'], friend['relationship'], friend["friend_since"])
-        print(curr_friend.__dict__)
         friend_list.append(curr_friend)
     return friend_list
