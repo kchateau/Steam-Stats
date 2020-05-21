@@ -15,4 +15,4 @@ def make_owned_game_object_list(api_response):
     for game in api_response:
         curr_game = Game(game['appid'], game['name'], game["playtime_forever"])
         game_list.append(curr_game)
-    return game_list
+    return game_list    
