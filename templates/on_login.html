@@ -11,7 +11,7 @@
 <p>User is currently {{ steam_user.state }}</p>
 <p>Friends:</p>
 {% for friend in friend_list %}
-    <p>{{friend.steam_id}} -- Friends since: {{friend.friend_since}}</p>
+    <p>{{friend.display_name}} -- Friends since: {{friend.friend_since}}</p>
 {% endfor %}
 <p>Owned Games:</p>
 {% for game in game_list %}
