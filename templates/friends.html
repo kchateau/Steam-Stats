@@ -1,27 +1,26 @@
 {% extends 'base.html' %} {% block content %}
-<a href="{% url 'on_login' %}">Home</a>
+<div class="container">
+  <table class="highlight">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Friends Since</th>
+      </tr>
+    </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Friends Since</th>
-    </tr>
-  </thead>
+    <tbody>
+      {% for friend in friend_list %}
 
-  <tbody>
-    {% for friend in friend_list %}
-
-    <tr>
-      <td>
-        {{friend.display_name}}
-      </td>
-      <td>
-        {{friend.friend_since}}
-      </td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
-
+      <tr>
+        <td>
+          {{friend.display_name}}
+        </td>
+        <td>
+          {{friend.friend_since}}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
 {% endblock %}
