@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'pages',
     'users',
+    'materialize'
 ]
 
 AUTH_USER_MODEL = 'users.CustomUser'  # user custom user model instead of default
