@@ -6,35 +6,10 @@
 <head>
     <meta charset="UTF-8">
 </head>
-<p>{{ user.username }} just logged in</p>
 <p>Steam ID: {{ steam_user.steam_id }}</p>
 <p>Username: {{ steam_user.display_name }}</p>
 <img src="{{ steam_user.avatar }}">
 <p>User is currently {{ steam_user.state }}</p>
-
-<div class="container">
-<table class="highlight">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Hours Played</th>
-      </tr>
-    </thead>
-  
-    <tbody>
-        {% for game in game_list %}
-      <tr>
-        <td>
-            {{game.name}}    
-            </td>
-        <td>
-            {{game.playtime}}
-        </td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-</div>
 
 </body>
 </html>
