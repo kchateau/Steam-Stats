@@ -25,6 +25,8 @@ def get_friend_list(steamID):
                 friend.display_name = user.display_name
                 friend.state = user.state
 
+    list_of_friends.sort(key=lambda r: r.friend_since)
+
     return list_of_friends
 
 def make_friend_object_list(api_response):
