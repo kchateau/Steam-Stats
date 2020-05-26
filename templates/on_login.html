@@ -3,16 +3,12 @@
 <head>
     <meta charset="UTF-8">
 </head>
-<img>
+<a href="{% url 'friends' %}">Friends</a>
 <p>{{ user.username }} just logged in</p>
 <p>Steam ID: {{ steam_user.steam_id }}</p>
 <p>Username: {{ steam_user.display_name }}</p>
 <img src="{{ steam_user.avatar }}">
 <p>User is currently {{ steam_user.state }}</p>
-<p>Friends:</p>
-{% for friend in friend_list %}
-    <p>{{friend.display_name}} -- Friends since: {{friend.friend_since}}</p>
-{% endfor %}
 <p>Owned Games:</p>
 {% for game in game_list %}
     <p>{{game.name}} -- Played for: {{game.playtime}} hours.</p>

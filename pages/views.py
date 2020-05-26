@@ -21,3 +21,13 @@ class LoginView(TemplateView):
         game_list = get_owned_games(self.request.user.steam_id)
         context["game_list"] = game_list
         return context    
+
+class FriendsView(TemplateView):
+    template_name = 'friends.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        friend_list = get_friend_list(self.request.user.steam_id)
+        context["friend_list"] = friend_list
+        return context
+    
